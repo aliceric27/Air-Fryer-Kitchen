@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="./favicon.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食佳餚</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/spacingjs" defer></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<script src="https://kit.fontawesome.com/44b3d6e296.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/04edb7bbc8.js" crossorigin="anonymous"></script>
+    <link href="./css.css" rel="stylesheet">
+    <script>
+
+        $(document).ready(function(){
+        
+$('#fmenu').on('click',function(){
+  $('#menu-modal-1').css('display','block');
+
+})
+
+$('#menu-modal-1').on('click',function(){
+  $('#menu-modal-1').css('display','none');
+
+})
+
+            //重整後回到頂部
+            
+            // window.onbeforeunload = function () {
+            //     window.scrollTo(0, 0);
+            //   }
+        
+            $('#email').hover( function(){
+                $('.tooltiptext').html('點擊複製email');
+            })
+        
+            $('#email').click (function () {
+                // Get the text field
+                var copymail = document.getElementById("email");
+              
+                // Select the text field
+                // copymail.select();
+                // copymail.setSelectionRange(0, 99999); // For mobile devices
+              
+                 // Copy the text inside the text field
+                navigator.clipboard.writeText('johncookkitchen@gmail.com');
+                $('.tooltiptext').html('<i class="fa-solid fa-check" style="color:green;"></i>已複製');
+                // Alert the copied text
+                // alert("Copied the text: " + 'johncookkitchen@gmail.com');
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "2000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                  }
+                toastr["success"]("已成功複製")
+        
+        
+            })
+        
+               window.onscroll = function() {myFunction()};
+          
+               function myFunction() {
+                 var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                 var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                 var scrolled = (winScroll / height) * 100;
+                 document.getElementById("myBar").style.height = scrolled + "%";
+               }
+        
+        
+            window.addEventListener('scroll',function(){
+                 console.log(this.window.scrollY);
+                 let A=window.scrollY;
+                 $('#scrollY').text(A);
+                 if (A>=250){
+                   
+                  $('#logog').css('display','none');
+            $('#logoa').css('display','block');
+                       $('.topbtn').css('display','block');
+                        $('.header').addClass('header-scroll');
+                        $('.header-in').css('border-radius','10px');
+                        
+                     
+                     if (A>=555){
+                        $('.inner-box').css('display', 'flex');
+                        $('.inner-box').css('opacity','1');
+                        // $('.tiny-item div').css('opacity','1'); 
+                        
+                        // $('.tiny-item div img ').css('opacity','1'); 
+                     }
+                     if (A>=1500){
+                        $('.foodbox').css('opacity','1');
+                        $('.foodbox-1').css('opacity','1');
+                        $('.foodimg-1').css('opacity','1');
+                        $('.foodimg-1 img').css('display','block'); 
+                        $('.foodtext-1').css('display','flex'); 
+                     }
+        
+                     if (A>=2000){
+                        $('.foodbox-2').css('opacity','1');
+                        $('.foodbox-2').css('opacity','1');
+                        $('.foodimg-2').css('opacity','1');
+                        $('.foodimg-2 img').css('display','block'); 
+                        $('.foodtext-2').css('display','flex');
+                     }
+                     if (A>=2400){
+                        $('.foodbox-3').css('opacity','1');
+                        $('.foodbox-3').css('opacity','1');
+                        $('.foodimg-3').css('opacity','1');
+                        $('.foodimg-3 img').css('display','block'); 
+                        $('.foodtext-3').css('display','flex');
+                     }
+                     if (A>=3000){
+                        $('.eat-show').css('opacity','1');
+                        $('.eat-show div').css('display','block');
+                        $('.eat-show div img').css('display','block'); 
+                     }
+                    //  if (A>=3300){
+                    //     $('.swiper').css('opacity','1');
+                    //     $('.eat-show div img').css('display','flex');
+                    //     $('.eat-show div img').css('opacity','1'); 
+                    //  }
+        
+                     if (A>=3700){
+                        $('.swiper').css('opacity','1');
+                        $('.bottom').css('opacity','1'); 
+                         $('.warp-box').css('display','block'); 
+                        // $('.warp-box').css('display','flex'); 
+                        $('.review-box').css('display','block'); 
+                        // $('.eat-show div img').css('display','flex');
+                        // $('.eat-show div img').css('opacity','1'); 
+                     }
+                     if (A>=2000){
+                        $('.bottom').css('opacity','1'); 
+                     }
+                     
+                 }
+                 else if(A==0){
+                  $('#logog').css('display','block');
+          $('#logoa').css('display','none');
+                    $('.topbtn').css('display','none');
+                    $('.header').removeClass('header-scroll');
+                    $('.header-in').css('border-radius','0px');
+                    $('.progress-bar').css('display','none');
+                    // $('.inner-box').css('opacity','0');
+                    // $('.inner-h1').css('opacity','0');
+                    
+        console.log('removed')
+                 }
+                    
+        
+                 else{
+                    console.log('else');
+                 }
+             })
+        
+        // 切換border小按鈕
+        $('#toolbtn').click(function(){
+        $('*').toggleClass('allitemborder');
+        })
+        
+        
+        
+        
+        
+        
+        
+        
+        // https://www.youtube.com/watch?v=f7PgUPNKMkI&t
+        // 取得itemDom元素
+        // let btn=document.querySelectorAll('.foodimg-1');
+        // //使用foreach將所有結果回傳並執行函數
+        // btn.forEach((btn) => {
+        //     //監聽滑鼠移動並執行function 
+        //     btn.addEventListener("mousemove",function(e){
+        //         btn.style.transitionDelay="0";
+        // let position = btn.getBoundingClientRect();
+        //  let x=e.pageX-position.right - position.width;
+        //  let y=e.pageY-position.bottom - position.height;
+        // btn.style.transform="translate(" + x*0.1+"px,"+y*0.1+"px)";
+        //     });
+        
+        //     btn.addEventListener("mouseout",(function(e){
+        //         btn.style.transform="translate(0px,0px)";
+        
+        //             }));
+            
+        // });
+        
+        //使用jquery控制移入.移出變更a元素顏色
+        
+        // $(function () {
+        // $('a').addClass('hoverlink');
+        // $('.item').on("mouseenter mouseleave",function(){
+        //     console.log('ok')
+        //     $(this).find('a').toggleClass('hoverlink');
+        // })
+        
+        // $('.item').on("mouseout",function(){
+        //     $(this).find('a').css('color','black');
+        // })
+        
+        // })
+        
+        
+        // 評論滑塊功能
+        
+        var mySwiper = new Swiper ('.swiper', {
+            autoplay:true, //自動切換slider開關
+            delay:1000,//切換slider延遲
+            speed:1000, 
+            slidesPerView :'1',
+            direction: 'horizontal', // 垂直切换选项
+            effect: "cards",
+            slideShadows:true,
+            loop: true, // 循环模式选项
+            grabCursor:true,
+            freeMode: false,
+            mousewheel: false,
+            
+            // 如果需要分页器
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            
+            // 如果需要前进后退按钮
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            
+            // 如果需要滚动条
+            // scrollbar: {
+            //   el: '.swiper-scrollbar',
+            // },
+          })        
+          
+        
+        })
+        
+        
+        
+        
+        // var foodSwiper = new Swiper ('.modalswiper', {
+        //     // autoplay:true, //自動切換slider開關
+        //     // delay:1000,//切換slider延遲
+        //     speed:500, 
+        //     slidesPerView :'1',
+        //     direction: 'horizontal', // 垂直切换选项
+        //     effect: "fade",
+        //     slideShadows:true,
+        //     loop: false, // 循环模式选项
+        //     grabCursor:false,
+        //     freeMode: false,
+        //     mousewheel: false,
+            
+        //     // 如果需要分页器
+        //     pagination: {
+        //       el: '.swiper-pagination',
+        //     },
+            
+        //     // 如果需要前进后退按钮
+        //     navigation: {
+        //       nextEl: '.swiper-button-next',
+        //       prevEl: '.swiper-button-prev',
+        //     },
+            
+        //     // 如果需要滚动条
+        //     // scrollbar: {
+        //     //   el: '.swiper-scrollbar',
+        //     // },
+        //   })        
+          
+        
+        
+        
+        // var foodimg1=document.querySelector('.foodimg-1');
+        // var foodimg2=document.querySelector('.foodimg-2');
+        // var foodimg3=document.querySelector('.foodimg-3');
+        // var eatshow1=document.querySelector('.eatshow-1');
+        // var eatshow2=document.querySelector('.eatshow-2');
+        // var eatshow3=document.querySelector('.eatshow-3');
+        // var chart=document.querySelector('foodChart-1');
+        // var fmodal = document.querySelector('.modal');
+        // var ove=document.querySelector('#overlay');
+        // var aaa=document.querySelector('.warp-box');
+        // // 檢測點擊所回傳的目標
+        // // aaa.addEventListener('click',function(e){
+        // // console.log(e.target);
+        
+        // // },false)
+        
+        // $('.close-button').on('click',function(){
+        //     $('#food-modal-1').css("display","none");
+        //     $('#food-modal-2').css("display","none");
+        //     $('#food-modal-3').css("display","none");
+        //     $('#food-modal-4').css("display","none");
+        //     $('#food-modal-5').css("display","none");
+        //     $('#food-modal-6').css("display","none");
+        //     $('#modal').css("opacity","0");
+        //     $('#modal').css("z-index","-1");
+        //    $('#overlay').css("opacity","0");
+        //    $('*').removeClass("lockscroll");
+        //    console.log("ok");
+        
+        // })
+        
+        
+        // window.addEventListener('click', function(e){
+        
+        //     if (foodimg1.contains(e.target)){
+        //         // $('#food-modal-2').css("display","none");
+        //         // $('#food-modal-3').css("display","none");
+        //         // $('#food-modal-4').css("display","none");
+        //         // $('#food-modal-5').css("display","none");
+        //         // $('#food-modal-6').css("display","none");
+        //         $('#food-modal-1').css("display","block");
+        //         $('#modal').css("opacity","1");
+        //         $('#modal').css("z-index","10");
+        //         // $('*').addClass("lockscroll");
+        //         $('#modal').addClass("animate__animated animate__zoomIn");
+        //         $('#overlay').css("opacity","1");
+        //         console.log("ok1");
+        //         $("#modal").on("animationend", function (){
+        //                     $(this).removeClass("animate__animated animate__zoomIn");
+        //                 })
+        
+        //   } 
+          
+        // else if (foodimg2.contains(e.target)){
+        //     // $('#food-modal-1').css("display","none");
+        //     // $('#food-modal-3').css("display","none");
+        //     // $('#food-modal-4').css("display","none");
+        //     // $('#food-modal-5').css("display","none");
+        //     // $('#food-modal-6').css("display","none");
+        //     $('#food-modal-2').css("display","block");
+        //     $('#modal').css("opacity","1");
+        //     $('#modal').css("z-index","10");
+        //     // $('*').addClass("lockscroll");
+        //     $('#modal').addClass("animate__animated animate__zoomIn");
+        //     $('#overlay').css("opacity","1");
+        //     console.log("ok1");
+        //     $("#modal").on("animationend", function (){
+        //                 $(this).removeClass("animate__animated animate__zoomIn");
+        //             })
+        // }
+        // else if (foodimg3.contains(e.target)){
+        //     // $('#food-modal-1').css("display","none");
+        //     // $('#food-modal-2').css("display","none");
+        //     // $('#food-modal-4').css("display","none");
+        //     $('#food-modal-3').css("display","block");
+        //     $('#modal').css("opacity","1");
+        //     $('#modal').css("z-index","10");
+        //     // $('*').addClass("lockscroll");
+        //     $('#modal').addClass("animate__animated animate__zoomIn");
+        //     $('#overlay').css("opacity","1");
+        //     console.log("ok1");
+        //     $("#modal").on("animationend", function (){
+        //                 $(this).removeClass("animate__animated animate__zoomIn");
+        //             })
+        // }
+        
+        // else if (eatshow1.contains(e.target)){
+        //     // $('#food-modal-1').css("display","none");
+        //     // $('#food-modal-2').css("display","none");
+        //     // $('#food-modal-3').css("display","none");
+        //     $('#food-modal-5').css("display","none");
+        //     $('#food-modal-6').css("display","none");
+        //     $('#food-modal-4').css("display","block");
+           
+        //     $('#modal').css("opacity","1");
+        //     $('#modal').css("z-index","10");
+        //     // $('*').addClass("lockscroll");
+        //     $('#modal').addClass("animate__animated animate__zoomIn");
+        //     $('#overlay').css("opacity","1");
+        //     console.log("ok1");
+        //     $("#modal").on("animationend", function (){
+        //                 $(this).removeClass("animate__animated animate__zoomIn");
+        //             })
+        // }
+        
+        // else if (eatshow2.contains(e.target)){
+        //     // $('#food-modal-1').css("display","none");
+        //     // $('#food-modal-2').css("display","none");
+        //     // $('#food-modal-3').css("display","none");
+        //      $('#food-modal-4').css("display","none");
+        //      $('#food-modal-6').css("display","none");
+        //     $('#food-modal-5').css("display","block");
+            
+        //     $('#modal').css("opacity","1");
+        //     $('#modal').css("z-index","10");
+        //     // $('*').addClass("lockscroll");
+        //     $('#modal').addClass("animate__animated animate__zoomIn");
+        //     $('#overlay').css("opacity","1");
+        //     console.log("ok1");
+        //     $("#modal").on("animationend", function (){
+        //                 $(this).removeClass("animate__animated animate__zoomIn");
+        //             })
+        // }
+        
+        
+        // else if (eatshow3.contains(e.target)){
+        //     // $('#food-modal-1').css("display","none");
+        //     // $('#food-modal-2').css("display","none");
+        //     // $('#food-modal-3').css("display","none");
+        //      $('#food-modal-4').css("display","none");
+        //      $('#food-modal-5').css("display","none");
+        //     $('#food-modal-6').css("display","block");
+        //     $('#modal').css("opacity","1");
+        //     $('#modal').css("z-index","10");
+        //     // $('*').addClass("lockscroll");
+        //     $('#modal').addClass("animate__animated animate__zoomIn");
+        //     $('#overlay').css("opacity","1");
+        //     console.log("ok1");
+        //     $("#modal").on("animationend", function (){
+        //                 $(this).removeClass("animate__animated animate__zoomIn");
+        //             })
+        // }
+        
+        
+        // else if(fmodal.contains(e.target)) {
+        //     console.log('modal')
+        // }
+          
+        //   else{
+        //     $('#food-modal-1').css("display","none");
+        //     $('#food-modal-2').css("display","none");
+        //     $('#food-modal-3').css("display","none");
+        //     $('#food-modal-4').css("display","none");
+        //     $('#food-modal-5').css("display","none");
+        //     $('#food-modal-6').css("display","none");
+        //     $('*').removeClass("lockscroll");
+        //     $('#modal').css("opacity","0");
+        //          $('#modal').css("z-index","-1");
+        //         $('#overlay').css("opacity","0");
+        //         console.log("ok");
+        //  } }
+        // )
+        
+        
+        
+        // $(".foodimg-1").on('click',function(){
+        //     $('#food-modal-1').css("display","block");
+        //     $('#modal').css("opacity","1");
+        //     $('#modal').css("z-index","10");
+        //     $('*').addClass("lockscroll");
+        //     $('#modal').addClass("animate__animated animate__zoomIn");
+        //     $('#overlay').css("opacity","1");
+        //     console.log("ok1");
+        //     $("#modal").on("animationend", function (){
+        //         $(this).removeClass("animate__animated animate__zoomIn");
+        //     })
+        //   })
+          
+        
+        
+        
+        
+        //   $(document).click(function() {
+             
+        //     if ($('#overlay').css("opacity")=="1"){
+        //         $('*').removeClass("lockscroll");
+        //     $('#modal').css("opacity","0");
+        //     $('#modal').css("z-index","-1");
+        //     $('#overlay').css("opacity","0");}
+        //     console.log("ok")
+        //   });
+        
+        
+        
+        const labels = [
+         '每日建議',
+         '嘉義雞肉飯',
+         '初炸橄欖油蔥雞',
+         '台式花雕雞',
+         '焙香胡麻雞胸',
+        '奶油菇菇雞'
+        ];
+        
+        
+        const data = {
+          labels: labels,
+          datasets: [{
+            axis:'y',
+            label: '熱量(大卡)',
+            backgroundColor:  [
+                'rgba(212, 200, 29,0.5)',
+              'rgba(255, 145, 0, 0.5)',
+              'rgba(4, 104, 255, 0.5)',
+              'rgba(203, 63, 242,0.5)',
+              'rgba(255, 48, 90, 0.5)',
+              'rgba(93, 181, 39, 0.5)'
+            ],
+            borderColor: [
+               'rgb(212, 200, 29)',
+              'rgb(255, 145, 0)',
+              'rgb(4, 104, 255)',
+              'rgb(203, 63, 242)',
+              'rgb(255, 48, 90)',
+              'rgb(93, 181, 39)'],borderWidth: 1,
+        
+            data: [2000,480,470,484,495,500],
+            fill:false
+          },{
+            backgroundColor:  [
+                'rgba(181, 202, 160,0.5)',
+                'rgba(255, 145, 0, 0.5)',
+                'rgba(4, 104, 255, 0.5)',
+                'rgba(203, 63, 242,0.5)',
+                'rgba(255, 48, 90, 0.5)',
+                'rgba(93, 181, 39, 0.5)'
+            ],
+            label: '蛋白質(公克)',
+            borderColor: [
+                'rgb(181, 202, 160)',
+               'rgb(255, 145, 0)',
+               'rgb(4, 104, 255)',
+               'rgb(203, 63, 242)',
+               'rgb(255, 48, 90)',
+               'rgb(93, 181, 39)'],borderWidth: 1,
+            data: [60, 30.2, 28,30.3,30.7,30.6]
+          },
+          {
+            backgroundColor:  [
+                'rgba(120, 125, 123,0.5)',
+                'rgba(255, 145, 0, 0.5)',
+                'rgba(4, 104, 255, 0.5)',
+                'rgba(203, 63, 242,0.5)',
+                'rgba(255, 48, 90, 0.5)',
+                'rgba(93, 181, 39, 0.5)'
+            ],
+            label: '鈉含量(毫克)',
+            borderColor: [
+                'rgb(120, 125, 123)',
+               'rgb(255, 145, 0)',
+               'rgb(4, 104, 255)',
+               'rgb(203, 63, 242)',
+               'rgb(255, 48, 90)',
+               'rgb(93, 181, 39)'],borderWidth: 1,
+            data: [1200, 193, 167,206,394,159]
+          }
+        
+        ]
+          
+        };
+        
+        const labels2 = [
+            '每日建議',
+            '嘉義雞肉飯',
+            '初炸橄欖油蔥雞',
+            '台式花雕雞',
+            '焙香胡麻雞胸',
+           '奶油菇菇雞'
+           ];
+        
+        
+           const data2 = {
+            labels: labels2,
+            datasets: [{
+              axis:'y',
+              label: '熱量(大卡)',
+              backgroundColor:  [
+                  'rgba(212, 200, 29,0.5)',
+                'rgba(255, 145, 0, 0.5)',
+                'rgba(4, 104, 255, 0.5)',
+                'rgba(203, 63, 242,0.5)',
+                'rgba(255, 48, 90, 0.5)',
+                'rgba(93, 181, 39, 0.5)'
+              ],
+              borderColor: [
+                 'rgb(212, 200, 29)',
+                'rgb(255, 145, 0)',
+                'rgb(4, 104, 255)',
+                'rgb(203, 63, 242)',
+                'rgb(255, 48, 90)',
+                'rgb(93, 181, 39)'],borderWidth: 1,
+          
+              data: [2000,430,420,434,445,450],
+              fill:false
+            },{
+              backgroundColor:  [
+                  'rgba(181, 202, 160,0.5)',
+                  'rgba(255, 145, 0, 0.5)',
+                  'rgba(4, 104, 255, 0.5)',
+                  'rgba(203, 63, 242,0.5)',
+                  'rgba(255, 48, 90, 0.5)',
+                  'rgba(93, 181, 39, 0.5)'
+              ],
+              label: '蛋白質(公克)',
+              borderColor: [
+                  'rgb(181, 202, 160)',
+                 'rgb(255, 145, 0)',
+                 'rgb(4, 104, 255)',
+                 'rgb(203, 63, 242)',
+                 'rgb(255, 48, 90)',
+                 'rgb(93, 181, 39)'],borderWidth: 1,
+              data: [60, 29.5, 27.3,29.6,30,29.9]
+            },
+            {
+              backgroundColor:  [
+                  'rgba(120, 125, 123,0.5)',
+                  'rgba(255, 145, 0, 0.5)',
+                  'rgba(4, 104, 255, 0.5)',
+                  'rgba(203, 63, 242,0.5)',
+                  'rgba(255, 48, 90, 0.5)',
+                  'rgba(93, 181, 39, 0.5)'
+              ],
+              label: '鈉含量(毫克)',
+              borderColor: [
+                  'rgb(120, 125, 123)',
+                 'rgb(255, 145, 0)',
+                 'rgb(4, 104, 255)',
+                 'rgb(203, 63, 242)',
+                 'rgb(255, 48, 90)',
+                 'rgb(93, 181, 39)'],borderWidth: 1,
+              data: [1200, 238, 211,250,438,203]
+            }
+          
+          ]
+            
+          };
+        
+          const labels3 = [
+            '每日建議',
+            '慢烤味噌魚',
+            '大紅袍滷雞腿',
+            '炙燒明太子雞腿'
+           ];
+        
+        
+           const data3 = {
+            labels: labels3,
+            datasets: [{
+              axis:'y',
+              label: '熱量(大卡)',
+              backgroundColor:  [
+                  'rgba(212, 200, 29,0.5)',
+                'rgba(255, 145, 0, 0.5)',
+                'rgba(4, 104, 255, 0.5)',
+                'rgba(203, 63, 242,0.5)',
+              ],
+              borderColor: [
+                 'rgb(212, 200, 29)',
+                'rgb(255, 145, 0)',
+                'rgb(4, 104, 255)',
+                'rgb(203, 63, 242)'],borderWidth: 1,
+          
+              data: [2000,430,420,434,445,450],
+              fill:false
+            },{
+              backgroundColor:  [
+                  'rgba(181, 202, 160,0.5)',
+                  'rgba(255, 145, 0, 0.5)',
+                  'rgba(4, 104, 255, 0.5)',
+                  'rgba(203, 63, 242,0.5)',
+              ],
+              label: '蛋白質(公克)',
+              borderColor: [
+                  'rgb(181, 202, 160)',
+                 'rgb(255, 145, 0)',
+                 'rgb(4, 104, 255)',
+                 'rgb(203, 63, 242)'],borderWidth: 1,
+              data: [60, 29.5, 27.3,29.6,30,29.9]
+            },
+            {
+              backgroundColor:  [
+                  'rgba(120, 125, 123,0.5)',
+                  'rgba(255, 145, 0, 0.5)',
+                  'rgba(4, 104, 255, 0.5)',
+                  'rgba(203, 63, 242,0.5)'
+              ],
+              label: '鈉含量(毫克)',
+              borderColor: [
+                  'rgb(120, 125, 123)',
+                 'rgb(255, 145, 0)',
+                 'rgb(4, 104, 255)',
+                 'rgb(203, 63, 242)'],borderWidth: 1,
+              data: [1200, 238, 211,250,438,203]
+            }
+          
+          ]
+            
+          };
+        
+        
+        const config = {
+          type: 'bar',
+          data: data,
+          options: {
+            indexAxis:'y',
+          }
+        };
+        
+        const config2 = {
+            type: 'bar',
+            data: data2,
+            options: {
+              indexAxis:'y',
+            }
+          };
+        
+          const config3 = {
+            type: 'bar',
+            data: data3,
+            options: {
+              indexAxis:'y',
+            }
+          };
+        
+        const myChart = new Chart(
+          document.getElementById('foodChart-1'),
+          config
+        );
+        
+        const myChart2 = new Chart(
+            document.getElementById('foodChart-2'),
+            config2
+          );
+        
+          const myChart3 = new Chart(
+            document.getElementById('foodChart-3'),
+            config3
+          );
+        
+          $('.topbtn').on('click',function () {
+            window.scrollTo(0, 0);
+            $('.progress-bar').css('display','block');
+          })</script>
+
+    
+    <style>
+.bottom{
+    /* display: none; */
+    height:33vh;
+    background-color: #bebebe;
+    opacity: 1;
+    animation: fadeIn 2s ease 0s 1 both;
+}
+
+.st-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    background: url(./EAT-TOP-02.jpeg);
+    background-size:cover;
+
+}
+.st-container h1 {
+    color: #ffff;
+    font-size: 3rem;
+}
+
+.st-container p {
+    color: #ffff;
+    
+}
+
+.about-warp{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  height: 55vh;
+}
+
+.about-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+
+}
+
+.about-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width:30vw; */
+  height: 30vh;
+margin-top: 5%;
+}
+
+
+.about-right img {
+
+  height: 100%;
+  width: 100%;
+}
+
+
+.about-right h1 , .about-left h1{
+  color: rgb(254, 183, 18);
+  margin: 1%;
+}
+
+.about-right h4 , .about-right p , .about-left h4 , .about-left p{
+  margin: 5%;
+}
+
+.about-left{
+  margin-right:5%;
+  width: 20vw;
+  height: 40vh;
+}
+
+
+
+.about-left img{
+  width:100%;
+  height:100%;
+}
+
+.ffbtn{
+  width: 10vw;
+  background-color: burlywood;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+.ffbtn:hover{
+  background-color: cornflowerblue;
+
+}
+.ffbtn span {
+  display: block;
+  text-align: center;
+  margin: 5%;
+}
+
+
+#menu-modal-1{
+  cursor: pointer;
+  left: 20%;
+  top: 50%;
+  position: absolute;
+   z-index: 1; 
+  width: 65vw;
+  height: 91vh;
+  animation:zoomIn 0.5s ease 0s 1 both;
+  display: none;
+}
+
+#menu-modal-1 img:hover{
+  animation:float;
+  /* display: none; */
+}
+
+
+#menu-modal-1 img{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /* visibility:collapse; */
+  
+}
+#btmtel:link ,#btmloc:visited
+{
+    color: #000000;
+}
+    </style>
+
+</head>
+<body>
+    <!-- 網站頂部 -->
+    <header class="header">
+
+        <div class="header-in">
+  
+          <div class="logo"><a href="./littleproject.html"><img id="logog" src="./lodbanner.gif"></a>
+          
+            <a href="./littleproject.html"> <img id="logoa" src="./banner.jpeg"></div></a>
+          <!--nav中間部分 -->
+          <nav>
+            <div class="menu">
+              <ul>
+                <a href="./food.html"><li>美食</li></a>
+                <a href=""><li>營養建議</li></a>
+                <a href="./location.html" ><li>店面位置</li></a>
+                <a href="mailto:aliceric27@gmail.com"><li>聯絡我們</li></a>
+                <a href="./about.html"><li>關於我們</li></a>
+              
+              </ul>
+          </div>
+          <!-- 這裡是nav最右邊的功能-->
+        </nav>
+          <div class="feature">
+            <!-- <div class="member">會員</div>
+          <div class="cart">購物車</div> -->
+          
+          </div>
+          
+          <!-- <button id="toolbtn">border</button>
+          <p id="scrollY"></p> -->
+        </div>
+        
+        
+      </header>
+
+
+    <div class="st-container">
+        <h1>美食佳餚</h1>
+        <p>Best Food</p>
+    </div>
+
+
+ 
+<div class="about-warp">
+
+
+<div class="about-left">
+
+  <img src="./yei3-listing.jpeg" alt="">
+
+</div>
+
+
+
+<div class="about-right">
+
+
+<h1>美味菜單</h1>
+<h4>探索最美味的餐點</h4>
+<div id="fmenu"class="ffbtn"><span>觀看菜單</span></div>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- <div class="about-warp">
+
+
+  <div class="about-left">
+
+    <img src="./enrgy.jpeg" alt="">
+  
+  </div>
+  
+  
+  
+  <div class="about-right">
+  
+  
+    <h1>營養成分</h1>
+    <h4>探索餐點營養內容</h4>
+    <div class="ffbtn"><span>觀看營養成分表</span></div>
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div> -->
+
+
+  <div id="overlay"></div>
+
+
+  
+    <div id="menu-modal-1">
+
+<img src="./foodmenu.png" alt="">
+</div>
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="bottom">
+
+        <div class="footerwarp">
+      
+      <div class="footerbox-1">
+        <div class="footer-in-1">
+      <h1>聯絡我們&nbsp;<a id="btmtel"href="tel:0412345869"><i class="fa-solid fa-phone"></i></a></h1>
+      <p> 電話專線:0987654321</p>
+      <ul>營業時間:週一至週六
+        <li>早上11:00~14:30</li>
+        <li>晚上17:00~19:30</li>
+      </ul>
+      </div>
+      </div>
+      
+      <div class="footerbox-2">
+        <div class="footer-in-2">
+      
+      <ul id="shhouse">
+        <h1>自取地點&nbsp;<a id="btmloc"href="./location.html"><i class="fa-solid fa-bag-shopping"></i></a></h1>
+        <li><button class="cta">
+          <a href="https://g.page/johncookkitchen?share" style="text-decoration:none;" target="_blank"><span class="hover-underline-animation">美村店</span></a>
+          <svg viewBox="0 0 46 16" height="10" width="15" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+          <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+          </svg>
+          </button>臺中市西區美村路一段101號</li>
+        <li><button class="cta">
+          <a href="https://goo.gl/maps/fP8L6hVVgHQqE5tc8" style="text-decoration:none;" target="_blank"><span class="hover-underline-animation">寶慶店</span></a>
+          <svg viewBox="0 0 46 16" height="10" width="15" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+          <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+          </svg>
+          </button>臺中市西屯區寶慶街66號</li>
+        <li><button class="cta">
+          <a href="https://goo.gl/maps/gz7h49ksrcggtdQdA" style="text-decoration:none;" target="_blank"><span class="hover-underline-animation">復興店</span></a>
+          <svg viewBox="0 0 46 16" height="10" width="15" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+          <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+          </svg>
+          </button>台中市東區復興路四段64號</li>
+      </ul>
+      
+      </div>
+      
+      </div>
+      <div class="footerbox-3">
+      
+        <ul>
+          <li><a href="https://line.me/ti/g2/-c2_dc22pM0mfg6Le6ciPvsikKa3eXRn_YXatQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+            <i class="fa-brands fa-line"></i></i></a></li>
+          <li><a href="https://www.instagram.com/ettodaytw/"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.instagram.com/ettodaytw/"><i class="fa-brands fa-square-facebook"></i></a></li>
+        </ul>
+          <div class="f-email" id="email" style="font-size: 2px;">johncookkitchen@gmail.com
+            <span class="tooltiptext">點擊複製email</span>
+          </div>
+      </div>
+      
+      
+      
+      
+        </div>
+      
+      </footer>  
+
+
+
+
+
+
+      
+</body>
+</html>
