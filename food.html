@@ -31,10 +31,13 @@
         
 $('#fmenu').on('click',function(){
   $('#menu-modal-1').css('display','block');
+  $('#menu-modal-1').css('z-index','10');
+  $('#overlay').css("opacity","1");
 
 })
 
 $('#menu-modal-1').on('click',function(){
+  $('#overlay').css("opacity","0");
   $('#menu-modal-1').css('display','none');
 
 })
@@ -755,6 +758,16 @@ $('#menu-modal-1').on('click',function(){
 
     
     <style>
+      canvas{
+    cursor: pointer;
+}
+
+/* .logo{
+    width:20%;
+    height:80%;
+    animation:fadeInLeft 1s ease 0s 1 both;
+} */
+
 .bottom{
     /* display: none; */
     height:33vh;
@@ -870,7 +883,11 @@ margin-top: 5%;
 }
 
 #menu-modal-1 img:hover{
-  animation:float;
+  position: relative;
+    animation-name: float;    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 1s;    /*動畫持續時間，單位為秒*/
+    /* animation-delay: 2s;    動畫延遲開始時間 */
+    animation-iteration-count: infinite;    /*動畫次數，infinite 為無限次*/  
   /* display: none; */
 }
 
@@ -904,7 +921,7 @@ margin-top: 5%;
             <div class="menu">
               <ul>
                 <a href="./food.html"><li>美食</li></a>
-                <a href=""><li>營養建議</li></a>
+                <a href="https://npower.heho.com.tw/search-nutrition" target="_blank"><li>營養建議</li></a>
                 <a href="./location.html" ><li>店面位置</li></a>
                 <a href="mailto:aliceric27@gmail.com"><li>聯絡我們</li></a>
                 <a href="./about.html"><li>關於我們</li></a>
@@ -950,7 +967,7 @@ margin-top: 5%;
 
 <h1>美味菜單</h1>
 <h4>探索最美味的餐點</h4>
-<div id="fmenu"class="ffbtn"><span>觀看菜單</span></div>
+<div id="fmenu"class="ffbtn"><span>查看菜單</span></div>
 
 
 
@@ -962,7 +979,6 @@ margin-top: 5%;
 
 
 </div>
-
 
 
 

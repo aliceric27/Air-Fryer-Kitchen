@@ -1,3 +1,5 @@
+
+
 *{
     padding:0;
     margin:0;
@@ -7,7 +9,8 @@
 }
 
 
-html {
+
+/* html {
     overflow: -moz-hidden-unscrollable;
     height: 100%;
 }
@@ -21,7 +24,7 @@ body {
     height: 100%;
 	width: calc(100vw + 18px);
 	overflow: auto;
-}
+} */
 
 .lockscroll{overflow:hidden;}
 
@@ -78,20 +81,26 @@ font-family: 'Noto Sans TC', sans-serif;
     padding: 0% 5% 0% 5% ;
 }
 .logo{
-    width:100px;
-    height:50px;
+    width:15%;
+    height:80%;
     animation:fadeInLeft 1s ease 0s 1 both;
+    filter: drop-shadow(1px 1px 3px #000);
+    
 }
 
 .logo img{
 width: 100%;
 height: 100%;
 object-fit: cover;
+
+clip-path: inset(1px round 12px);
 }
 nav{
+    /* position: relative; */
     height: 100%;
 }
 .menu{
+    /* position: absolute; */
     width:100%;
     height: 100%;
     margin-right:35vw;
@@ -148,7 +157,7 @@ z-index: 1;
 display: flex;
 justify-content: center;
 align-items: center;
-margin:2px auto 10px auto;
+margin:0 auto 10px auto;
 }
 
 
@@ -234,6 +243,7 @@ z-index: 1;
 background-size:contain;
 background-repeat: no-repeat;
 animation:bounceInLeft 1s ease 0s 1 both;
+filter: drop-shadow(-10px 4px 15px #000);
 }
 
 
@@ -293,7 +303,9 @@ background-repeat: no-repeat;
     right: 0;
 }
 
-
+canvas{
+    cursor: pointer;
+}
 
 /* Food BOX */
 .foodbox{
@@ -341,11 +353,13 @@ background-repeat: no-repeat;
 }
 
 .foodimg-1 img{
+    /* filter: brightness(1.1) saturate(1.1) contrast(1.3); */
     display: none;
     width: 100%;
     height: 100%;
     /* opacity: 0; */
     animation:bounceInLeft 1s ease 0s 1 both;
+    filter: drop-shadow(15px 8px 20px #000);
 }
 .foodtext-1{
     display: none;
@@ -382,6 +396,7 @@ background-repeat: no-repeat;
                 cursor: pointer;  
                 margin-right: 2%;
 opacity: 0;
+
 }
 
 .foodimg-2 img{
@@ -389,6 +404,7 @@ opacity: 0;
     height: 100%;
     display: none;
     animation:bounceInRight 1s ease 0s 1 both;
+    filter: drop-shadow(-15px 8px 20px #000);
 }
 .foodtext-2{
     width: auto;
@@ -432,6 +448,7 @@ opacity: 0;
     height: 100%;
     display: none;
     animation:bounceInLeft 1s ease 0s 1 both;
+    filter: drop-shadow(15px 8px 20px #000);
 }
 .foodtext-3{
     width: auto;
@@ -444,11 +461,13 @@ opacity: 0;
 }
 
 
+
+
 .eat-show{
     display: flex;
     cursor: pointer;
     height: auto;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     margin-top: 5%;
     opacity: 0;
@@ -535,6 +554,8 @@ opacity: 0;
     width: 100%;
     height: 100%;
     background-color: cadetblue;
+    
+    
 }
 
 .swiper{
@@ -546,30 +567,35 @@ opacity: 0;
     opacity: 1;
     animation: bounceIn 2s ease 0s 1 both;
     /* background-color: brown; */
+    
 }
 
 
 .warp-box{
+
     width: 100%;
     height:100%;
-    background-color: burlywood;
+    /* background-color: burlywood; */
     justify-content: space-around;
+    /* overflow: hidden; */
 }
 
 .review-box{
-    background-color: rgb(99, 42, 165);
+    /* background-color: rgb(99, 42, 165); */
     width: 100%;
     height: 100%;
     
 }
 
 .review-top{
+    color: rgb(0, 0, 0);
     padding: 25px 55px;
     height: 35vh;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     position: relative;
     display: flex;
     align-items: center;
+    border-radius: 20px 20px 0 0;
     /* overflow:auto; */
 }
 
@@ -578,7 +604,7 @@ opacity: 0;
     display: block;
     width: 5%;
     height: 10%;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     position: absolute;
     transform: scaleX(.75) rotate(45deg);
     -ms-transform: scaleX(.75) rotate(45deg);
@@ -598,6 +624,7 @@ left: 20%;
     align-items: center;
 justify-content: center;
 height: 15vh;
+border-radius: 0 0 20px 20px;
 }
 .elementor-testimonial__image{
     width: 50px;
@@ -654,6 +681,7 @@ margin-right: 0;
 /* footer 底部區域  */
 .bottom{
     /* display: none; */
+    width: 100%;
     height:100%;
     background-color: #bebebe;
     opacity: 0;
@@ -665,7 +693,7 @@ margin-right: 0;
     width: 100%;
     top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .footerbox-1{
@@ -686,6 +714,9 @@ margin-right: 0;
     
 }
 
+.fa-bag-shopping{
+    color: #000000;
+}
 
 .footer-in-1 p{
     margin-bottom: 5%;
@@ -693,7 +724,7 @@ margin-right: 0;
 
 
 .footer-in-1 li{
-    margin: 6%;
+    margin-bottom: 6%;
     list-style: none;
     list-style-type: none;
 }
@@ -788,7 +819,7 @@ font-size:2%;
     
 }
 .footerbox-3 li{
-    margin: 5%;
+    padding: 4%;
     font-size:3vw;
     list-style: none;
 }
@@ -954,20 +985,51 @@ font-size:2%;
 }
 
 
+@keyframes quake{
 
+
+    0% { transform: translate(1px, 1px) rotate(0deg) scale(1.5); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg) scale(1.5); }
+    20% { transform: translate(-3px, 0px) rotate(1deg) scale(1.5); }
+    30% { transform: translate(3px, 2px) rotate(0deg) scale(1.5); }
+    40% { transform: translate(1px, -1px) rotate(1deg) scale(1.5); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg) scale(1.5); }
+    60% { transform: translate(-3px, 1px) rotate(0deg) scale(1.5); }
+    70% { transform: translate(3px, 1px) rotate(-1deg) scale(1.5); }
+    80% { transform: translate(-1px, -1px) rotate(1deg) scale(1.5); }
+    90% { transform: translate(1px, 2px) rotate(0deg) scale(1.5); }
+    100% { transform: translate(1px, -2px) rotate(-1deg) scale(1.5); }
+
+}
+
+@keyframes fquake{
+
+
+    0% { transform: translate(1px, 1px) rotate(180deg) scale(3); }
+    10% { transform: translate(-1px, -2px) rotate(180deg) scale(3); }
+    20% { transform: translate(-3px, 0px) rotate(180deg) scale(3); }
+    30% { transform: translate(3px, 2px) rotate(180deg) scale(3); }
+    40% { transform: translate(1px, -1px) rotate(180deg) scale(3); }
+    50% { transform: translate(-1px, 2px) rotate(180deg) scale(3); }
+    60% { transform: translate(-3px, 1px) rotate(180deg) scale(3); }
+    70% { transform: translate(3px, 1px) rotate(180deg) scale(3); }
+    80% { transform: translate(-1px, -1px) rotate(180deg) scale(3); }
+    90% { transform: translate(1px, 2px) rotate(180deg) scale(3); }
+    100% { transform: translate(1px, -2px) rotate(180deg) scale(3); }
+
+}
 
 
 
 .topbtn {
     cursor: pointer;
-    display: none;
-    position: fixed;
-    right:0;
-    bottom: 0;
+    /* display: none; */
+    position: absolute;
+    left: 10px;
     width: 60px;
     height: 60px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 10%;
+    right: 0;
     background-color: #ffc400db;
     color: #FFF;
     border-radius: 50px;
@@ -977,11 +1039,12 @@ font-size:2%;
     z-index: 100;
     border: #004dff;
     transition: 0.5s;
-    animation: jackInTheBox 1s;
+    animation: jackInTheBox 1s ;
   }
   
   .topbtn:hover {
     transform: scale(1.5);
+    /* animation: quake 0.5s infinite; */
   }
   
   .topbtn:active {
@@ -1003,27 +1066,41 @@ font-size:2%;
 
   #fire{
     position: absolute;
-    left:20px;
+    left:22px;
     bottom:0;
     transform:rotate(180deg);
+    /* animation: fquake 0.5s infinite; */
   }
+
+#smoke{
+    visibility:hidden;
+    position: absolute;
+    left: 0;
+    height: 100px;
+    bottom:-400%;
+    transform:rotate(180deg);
+    filter: brightness(0.5) saturate(1.2) contrast(0.85);
+    animation: fquake 0.5s infinite;
+}
 
 
 
 
   
   .progress-bar {
-    display: none;
+    /* display: none; */
+    position: relative;
     position:fixed;
+    top:50px;
     right:50px;
-    bottom:5px;
-    background: #5b5b5b;
+    bottom:0px;
+    /* background: #5b5b5b; */
     width: 40px;
     height: 100%;
   }
 
-  .progress-bar::before {
-    /* display: none; */
+  /* .progress-bar::before {
+    display: none;
     content: '';
     border-right: dashed 5px  rgb(251, 255, 0);
     position:absolute;
@@ -1032,7 +1109,7 @@ font-size:2%;
     width: 40px;
     
     height: 100%;
-  }
+  } */
 
   .wwfood h1,.wwfood h2,.wwfood p{
     margin: 2%;
@@ -1052,7 +1129,298 @@ li a:hover{
     color: #fff;
 }
 
+.mobile-menu {
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1;
+  
+  }
+  .mobile-menu__line,
+  .mobile-menu::before,
+  .mobile-menu::after {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #010101;
+  }
+  
+  /* 漢堡選單中間橫槓 */
+  .mobile-menu__line {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* 漢堡選單上面橫槓 */
+  .mobile-menu::before {
+    content: '';
+    top: 0;
+  }
+  
+  /* 漢堡選單下面橫槓 */
+  .mobile-menu::after {
+    content: '';
+    bottom: 0;
+  }
+
+@media screen and (max-width:900px) {
+#logoa{
+    display: none;
+}
+    .mobile-menu{
+        display:block;
+    }
+    nav{
+        width: 100vw;
+        position: relative;
+        height: 100%;
+    }
+
+
+    .menu{
+        display:none;
+        position: absolute;
+        width:100vw;
+        height: 100%; 
+        top:10vh;
+        left: 50vw;
+        /* top: 10%; */
+        /* margin-right:35vw; */
+        /* top: 10vw; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content:flex-start; */
+        /* align-items:center; */
+        animation: fadeInUp 1s ease 0s 1 both;
+        /* padding:1% 0 0 0 */
+        z-index: 3;
+        transition: all 0.5s;
+        
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        /* justify-content:space-around; */
+    
+    }
+    .menu li{
+        
+        border-radius: 2px;
+        background-color: #c0c0c0da;
+        border: #5b5b5b 1px solid;
+        padding: 1%;
+        float: none;
+        width: 35vw;
+        font-size: 20px;
+        /* display: inline-block; */
+        /* margin-right:30px; */
+    
+    }
+
+    .menu li:hover{
+        border-radius: 2px;
+        background-color: #ffffff;
+       color: #000000;
+    
+    }
+
+
+    .foodimg-1{
+        opacity: 0;
+        width: 20vw;
+        height: 20vh;
+        border-radius: 30px;
+     /* background: #e0e0e0; */
+     box-shadow: 15px 15px 30px #bebebe,
+                 -15px -15px 30px #d1d1d1;
+                 margin-right: 1%;
+                 cursor: pointer;
+                 object-fit: contain;   
+                 margin-left: 2%;
+    }
+
+    .foodimg-2{
+        width: 20vw;
+        height: 20vh;
+        object-fit: contain;   
+        margin-left: 2%;
+        border-radius: 30px;
+        /* background: #e0e0e0; */
+        box-shadow: 15px 15px 30px #bebebe,
+                    -15px -15px 30px #d1d1d1;
+                    margin-left: 1%;
+                    cursor: pointer;  
+                    margin-right: 2%;
+    opacity: 0;
+    }
+    .foodimg-3{
+        width: 20vw;
+        opacity:0;
+        height: 20vh;
+        border-radius: 30px;
+        /* background: #e0e0e0; */
+        box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
+        margin-right: 1%;
+        cursor: pointer;
+        object-fit: contain;   
+        margin-left: 2%;
+    }
+    .eat-show div{
+
+        width:30%;
+        height: 20vh;
+        position: relative;
+        animation: fadeIn 1s ease 0s 1 both;
+    
+    }
+    
+
+    .swiper{
+        width: 50%;
+        height:50vh;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        /* display: none; */
+        opacity: 1;
+        animation: bounceIn 2s ease 0s 1 both;
+        /* background-color: brown; */
+    }
+    .modal {
+        position:fixed;
+        top: 10%;
+        left:35%;
+        /* transform: translate(-50%, -50%) scale(0); */
+         /* transition: 200ms ease-in-out; */
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        z-index: 10%;
+        width: 50%;
+        /* height: 50%; */
+        max-width: 80%;
+       background: #ffffff;
+       box-shadow: 10px 19px 36px 0px rgba(0,0,0,0.63);
+       /* opacity: 0; */
+       opacity: 0;
+      }
+
+      .footer-in-1 h1 {
+        margin-bottom: 5%;
+        font-size: 2rem;
+    }
 
 
 
+    .footer-in-2 p{
+        width: 100%;
+    font-size: 2rem;
+    }
+}
+@media screen and (max-width:375px) {
+  
+    .mvbox p{
+        display: inline-block;
+        text-align: center;
+        height: 35%;
+        min-width: 100%;
+        z-index: 2;
+        font-size: 10px;
+        font-weight: 450;
+        color: rgba(255, 255, 255, 0.924);
+    position: absolute;
+    }
+
+
+
+    .foodimg-1{
+        opacity: 0;
+        width: 20vw;
+        height: 20vh;
+        border-radius: 30px;
+     /* background: #e0e0e0; */
+     box-shadow: 15px 15px 30px #bebebe,
+                 -15px -15px 30px #d1d1d1;
+                 margin-right: 1%;
+                 cursor: pointer;
+                 object-fit: contain;   
+                 margin-left: 2%;
+    }
+
+    .foodimg-2{
+        width: 20vw;
+        height: 20vh;
+        object-fit: contain;   
+        margin-left: 2%;
+        border-radius: 30px;
+        /* background: #e0e0e0; */
+        box-shadow: 15px 15px 30px #bebebe,
+                    -15px -15px 30px #d1d1d1;
+                    margin-left: 1%;
+                    cursor: pointer;  
+                    margin-right: 2%;
+    opacity: 0;
+    }
+    .foodimg-3{
+        width: 20vw;
+        opacity:0;
+        height: 20vh;
+        border-radius: 30px;
+        /* background: #e0e0e0; */
+        box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
+        margin-right: 1%;
+        cursor: pointer;
+        object-fit: contain;   
+        margin-left: 2%;
+    }
+    .eat-show div{
+
+        width:30%;
+        height: 20vh;
+        position: relative;
+        animation: fadeIn 1s ease 0s 1 both;
+    
+    }
+    
+
+    .swiper{
+        width: 50%;
+        height:50vh;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        /* display: none; */
+        opacity: 1;
+        animation: bounceIn 2s ease 0s 1 both;
+        /* background-color: brown; */
+    }
+    .modal {
+        position:fixed;
+        top: 10%;
+        left:35%;
+        /* transform: translate(-50%, -50%) scale(0); */
+         /* transition: 200ms ease-in-out; */
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        z-index: 10%;
+        width: 50%;
+        /* height: 50%; */
+        max-width: 80%;
+       background: #ffffff;
+       box-shadow: 10px 19px 36px 0px rgba(0,0,0,0.63);
+       /* opacity: 0; */
+       opacity: 0;
+      }
+
+      .footer-in-1 h1 {
+        margin-bottom: 5%;
+        font-size: 2rem;
+    }
+
+
+
+    .footer-in-2 p{
+        width: 100%;
+    font-size: 2rem;
+    }
+}
 

@@ -12,7 +12,7 @@
     <title>小專題</title>
   </head>
   <body>
-  
+    
     <!-- 網站頂部 -->
     <header class="header">
 
@@ -26,7 +26,7 @@
           <div class="menu">
             <ul>
               <a href="./food.html"><li>美食</li></a>
-              <a href=""><li>營養建議</li></a>
+              <a href="https://npower.heho.com.tw/search-nutrition" target="_blank"><li>營養建議</li></a>
               <a href="./location.html"><li>門市據點</li></a>
               <a href="mailto:aliceric27@gmail.com"><li>聯絡我們</li></a>
               <a href="./about.html"><li>關於我們</li></a>
@@ -36,13 +36,16 @@
         <!-- 這裡是nav最右邊的功能-->
       </nav>
         <div class="feature">
+          <div class="mobile-menu">
+            <span class="mobile-menu__line"></span>
+          </div>
           <!-- <div class="member">會員</div>
         <div class="cart">購物車</div> -->
         
         </div>
         
-        <button id="toolbtn">border</button>
-        <p id="scrollY"></p>
+         <!-- <button id="toolbtn">border</button> -->
+        <!--<p id="scrollY"></p> -->
       </div>
       
       
@@ -52,7 +55,7 @@
 <!-- 影片含標題文字 -->
 
 <div class="mvbox">
-  <video src="./food.mp4"loop muted autoplay ></video>
+  <video src="./food.mp4"loop muted autoplay></video>
   <p>第一間氣炸廚房，<br>最高可減油<strong>80%</strong>，<br>讓美食負擔更少，口味更好！</p>
   </div>
 
@@ -384,6 +387,8 @@
     <div class="f-email" id="email" style="font-size: 2px;">johncookkitchen@gmail.com
       <span class="tooltiptext">點擊複製email</span>
     </div>
+
+    
 </div>
 
 
@@ -393,13 +398,24 @@
 
 </footer>  
 
-<button class="topbtn">
-  <i class="fa-brands fa-space-awesome"></i> 
-  <img id="fire" src="./firee.gif" alt="" width="20px"/>
   
+<!-- <button class="topbtn">
+  <i class="fa-brands fa-space-awesome"></i> 
+  <img id="fire" src="./firee.gif" alt="" width="20px"/> -->
+  <!-- <img id="smoke" src="./smoke.png" alt=""> -->
   <!-- <div class="arrow-up"></div> -->
-</button>
-<div class="progress-bar" id="myBar"></div>
+<!-- </button> -->
+
+<div class="progress-bar" id="myBar">
+  <button class="topbtn">
+    <i class="fa-brands fa-space-awesome"></i> 
+    <img id="fire" src="./firee.gif" alt="" width="20px"/>
+    <img id="smoke" src="./smoke.png" alt="">
+    <!-- <div class="arrow-up"></div> -->
+  </button>
+
+
+</div>
 
 <!-- 健康餐Modal -->
 <div class="modal" id="modal">
