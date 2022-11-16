@@ -195,6 +195,7 @@ $(document).ready(function(){
                 
             }
             else if(A==0){
+
               $('.topbtn').css('background-color', '#ffc400db')
               $('.topbtn').css('animation','');
               $('#fire').css('animation','');
@@ -205,6 +206,8 @@ $(document).ready(function(){
                $('.header').removeClass('header-scroll');
                $('.header-in').css('border-radius','0px');
                $('.progress-bar').css('display','none');
+               $('.header-in').removeClass('shine')
+               $('.header-in').css('background-color','rgba(245, 192, 68)')
                // $('.inner-box').css('opacity','0');
                // $('.inner-h1').css('opacity','0');
                
@@ -836,6 +839,9 @@ const myChart2 = new Chart(
     $('.topbtn').css('animation','quake 0.5s infinite')
     $('.topbtn').css('background-color', '#d10202a3')
     $('#fire').css('animation','fquake 0.5s infinite')
+    $('.header-in').addClass('shine')
+    $('.header-in').css('background-color','#000')
+
     setTimeout(function(){
 
 // console.log('time')
@@ -843,7 +849,7 @@ const myChart2 = new Chart(
     // $('.progress-bar').css('display','block');
 
     $('#smoke').css('visibility','initial')
-
+ 
 
 
 
