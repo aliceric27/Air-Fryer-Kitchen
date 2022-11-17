@@ -195,6 +195,7 @@ $(document).ready(function(){
                 
             }
             else if(A==0){
+              isclick = true;
               $('.logo').css('display','block')
               $('.topbtn').css('background-color', '#ffc400db')
               $('.topbtn').css('animation','');
@@ -832,10 +833,12 @@ const myChart2 = new Chart(
     document.getElementById('foodChart-3'),
     config3
   );
-
+let isclick = true;
   $('.topbtn').on('click',function () {
+    
 
-
+    if(isclick){
+      isclick = false;
     $('.topbtn').css('animation','quake 0.5s infinite')
     $('.topbtn').css('background-color', '#d10202a3')
     $('#fire').css('animation','fquake 0.5s infinite')
@@ -857,5 +860,5 @@ const myChart2 = new Chart(
 
 
     },1000)
-
+  }
   })
