@@ -79,6 +79,7 @@ font-family: 'Noto Sans TC', sans-serif;
     background-image: url(./shine.gif);
     background-color: #000;
     background-size: 7%;
+    animation: bounceIn 1s;
 }
 
 .header-in{

@@ -195,7 +195,7 @@ $(document).ready(function(){
                 
             }
             else if(A==0){
-
+              $('.logo').css('display','block')
               $('.topbtn').css('background-color', '#ffc400db')
               $('.topbtn').css('animation','');
               $('#fire').css('animation','');
@@ -841,7 +841,7 @@ const myChart2 = new Chart(
     $('#fire').css('animation','fquake 0.5s infinite')
     $('.header-in').addClass('shine')
     $('.header-in').css('background-color','#000')
-
+    $('.logo').css('display','none')
     setTimeout(function(){
 
 // console.log('time')
@@ -856,6 +856,6 @@ const myChart2 = new Chart(
 
 
 
-    },500)
+    },1000)
 
   })
