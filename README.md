@@ -3,11 +3,11 @@
 ## 首頁
 
 
-![](/src/demo.mp4)
+https://user-images.githubusercontent.com/30149653/218979876-927f505e-21c3-44e0-a1b8-95c888327c78.mp4
 
 ## Chart.js套件
 
-<img src="https://i.imgur.com/5R6ScDA.png" alt="image-20230215161451209" style="zoom: 33%;" />
+![image-20230215162438101](https://i.imgur.com/24zSPDe.png)
 
 
 
