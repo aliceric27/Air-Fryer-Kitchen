@@ -3,7 +3,7 @@
 ## 首頁
 
 
-<video src='/src/demo.mp4' />
+![](/src/demo.mp4)
 
 ## Chart.js套件
 
