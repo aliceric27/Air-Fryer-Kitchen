@@ -2,7 +2,8 @@
 
 ## 首頁
 
-![](https://i.imgur.com/4BvD85F.mp4)
+
+<video src='/src/demo.mp4' />
 
 ## Chart.js套件
 
